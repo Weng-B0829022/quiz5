@@ -14,7 +14,7 @@ class CounterButton extends React.Component {
     render() {
         var text = this.state.counter;
         return (
-        <button onClick={this.handleClick}>你點了{text}次.</button>
+        <button onClick={this.handleClick}>你點了第{this.props.NO}個按鈕{text}次.</button>
         );
       }
     }
@@ -22,7 +22,7 @@ class CounterButton extends React.Component {
 const multiButton=(num)=>{
     var output=[];
     for(let i=1;i<num+1;++i)
-        output.push(<CounterButton/>)
+        output.push(<CounterButton NO ={i}></CounterButton>)
     return output;
 }
     
